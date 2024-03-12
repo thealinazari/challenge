@@ -1,0 +1,29 @@
+@if (form) {
+<form [formGroup]="form" class="p-2">
+  @for (inp of data.inputs; track $index) {
+  <div class="mb-3">
+    <label
+      [for]="inp.id"
+      [ngClass]="{
+        'form-check-label': inp.type === 'checkbox',
+        'form-label': inp.type !== 'checkbox'
+      }"
+      >{{ inp.label }}</label
+    >
+    <input
+      [type]="inp.type"
+      [ngClass]="{
+        'form-check-input': inp.type === 'checkbox',
+        'form-control': inp.type !== 'checkbox'
+      }"
+      [id]="inp.id"
+    />
+    <div *ngIf="inp.description" class="form-text">
+      {{ inp.description }}
+    </div>
+  </div>
+  }
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+}

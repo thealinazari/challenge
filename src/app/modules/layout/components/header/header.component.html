@@ -1,0 +1,40 @@
+<header class="app-header fixed-top d-flex align-items-center">
+  <div class="header-logo">
+    <a routerLink="/">
+      <img style="width: 100px" src="/assets/media/logo.svg" />
+    </a>
+  </div>
+
+  <div class="w-100 d-flex jusitfy-content-center align-items-center">
+    <div class="d-flex align-items-center">
+      <button class="btn btn-sm btn-icon" (click)="layoutUtil.SidebarExpand()">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <nav class="app-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item pe-3">
+          <button
+            class="btn btn-icon"
+            (click)="
+              layoutService.themeSwitcher(
+                layoutService.theme.value === 'dark' ? 'light' : 'dark'
+              )
+            "
+          >
+            <i
+              [ngClass]="{
+                'fas fa-sun': layoutService.theme.value === 'dark',
+                'fa-solid fa-moon': layoutService.theme.value === 'light'
+              }"
+            ></i>
+          </button>
+        </li>
+        <li class="nav-item pe-3 dropdown">
+          <app-user-menu></app-user-menu>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

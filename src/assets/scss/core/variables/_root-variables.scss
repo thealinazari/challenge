@@ -1,0 +1,15 @@
+:root {
+  --bs-link-color: unset;
+}
+
+@include color-mode(dark) {
+  --cu-card-cap-bg: #{$card-cap-bg-dark} !important;
+  --cu-card-bg: #{$card-bg-dark} !important;
+  --cu-scrolll-bg: #303030;
+}
+
+@include color-mode(light) {
+  --cu-card-cap-bg: #{$card-cap-bg} !important;
+  --cu-card-bg: #{$card-bg} !important;
+  --cu-scrolll-bg: #bbbbbb;
+}

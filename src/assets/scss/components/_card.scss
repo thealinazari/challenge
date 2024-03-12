@@ -1,0 +1,11 @@
+.card {
+  background-color: var(--cu-card-bg);
+
+  .card-body {
+    overflow-x: scroll;
+  }
+}
+
+.card-header {
+  background-color: var(--cu-card-cap-bg);
+}

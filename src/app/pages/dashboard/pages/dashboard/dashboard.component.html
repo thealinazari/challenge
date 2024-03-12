@@ -1,0 +1,10 @@
+<!-- @for (comp of dashboard?.comps ?? []; track $index) {
+<div class="card" [id]="'interact_' + comp.id">
+  <div class="card-header">{{ comp.title }}</div>
+  <div class="card-body">
+    <ng-container *ngComponentOutlet="comp.viewComponent; inputs: { comp }" />
+  </div>
+</div>
+} -->
+
+<div class="w-100 h-100" id="layoutContainer"></div>

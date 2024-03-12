@@ -1,0 +1,7 @@
+.main {
+  height: calc(100vh - 136px);
+
+  &--full {
+    height: 100vh;
+  }
+}

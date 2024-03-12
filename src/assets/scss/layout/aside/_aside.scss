@@ -1,0 +1,27 @@
+.app-aside {
+  width: $app-aside-width;
+  height: calc(100vh - $app-header-height);
+  top: $app-header-height;
+  left: 100%;
+  background-color: $aside-bg;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &--expanded {
+    @extend .app-aside;
+
+    left: 0;
+  }
+
+  .nav .active {
+    background-color: $primary;
+    color: $white;
+  }
+}
+
+[data-bs-theme="dark"] {
+  .app-aside {
+    background-color: $aside-bg-dark;
+  }
+}

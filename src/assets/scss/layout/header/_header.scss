@@ -1,0 +1,15 @@
+.app-header {
+  height: $app-header-height;
+  padding: 0 $base-padding;
+  background-color: $header-bg;
+}
+
+[data-bs-theme="dark"] {
+  .app-header {
+    background-color: $header-bg-dark;
+  }
+}
+
+.header-logo {
+  width: $app-aside-width;
+}

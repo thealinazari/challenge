@@ -1,0 +1,30 @@
+<div class="p-2">
+  <div>
+    <table class="table align-middle table-row-dashed gy-3 dataTable no-footer">
+      <thead>
+        <tr class="text-start text-gray-500 fs-7 gs-0">
+          @for (header of data.headers; track $index) {
+          <th class="min-w-100px text-center">{{ header }}</th>
+          }
+        </tr>
+      </thead>
+
+      <tbody class="text-gray-600">
+        @for (row of data.rows;track $index ) {
+        <tr [ngClass]="{ even: $index % 2 === 0, odd: $index % 2 !== 0 }">
+          @for (data of row; track $index) {
+          <td class="text-center">{{ data }}</td>
+          }
+
+          <td class="text-center">
+            <button class="btn btn-sm btn-icon h-25px w-25px">
+              <i class="fas fa-info-circle"></i>
+            </button>
+          </td>
+        </tr>
+
+        }
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div>
+  <div>
+    <app-header></app-header>
+  </div>
+  <div class="app-wrapper">
+    <app-aside [dashboards]="dashboards"></app-aside>
+    <main class="p-2" [ngClass]="{ 'app-main': layoutUtil.isAsideExpanded() }">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>

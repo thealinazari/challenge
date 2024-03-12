@@ -1,0 +1,15 @@
+<nav class="app-aside--expanded position-fixed pt-2" id="aside">
+  <ul class="nav">
+    @for (dash of dashboards; track $index) {
+    <li
+      class="nav-item w-100 mt-1"
+      [routerLink]="['dashboard', dash.title]"
+      routerLinkActive="active"
+    >
+      <a class="nav-link px-2 fw-semibold fs-6 text-gray-200">
+        {{ dash.title }}
+      </a>
+    </li>
+    }
+  </ul>
+</nav>

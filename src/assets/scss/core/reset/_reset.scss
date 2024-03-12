@@ -1,0 +1,20 @@
+ol,
+ul,
+dl {
+  margin: 0 !important;
+  list-style: none;
+}
+
+a {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  background: transparent !important;
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cu-scrolll-bg) !important;
+}
